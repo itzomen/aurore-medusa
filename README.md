@@ -56,6 +56,17 @@ This starter has minimal prerequisites and most of these will usually already be
 
 Your local Medusa server is now running on port **9000**.
 
+### Database Migrations
+
+```bash
+# generate the migration file
+npx typeorm migration:create -n UserChanged --dir src/migrations
+# build files
+npm run build
+# migrate
+medusa migrations run
+```
+
 ### Seeding your Medusa store
 
 ---
