@@ -59,6 +59,20 @@ export default async (router) => {
     res.json({ brand });
   });
   /*
+   * Get Brand by handle
+   * GET
+   */
+  router.get(
+    "/store/brand/:handle",
+    cors(storeCorsOptions),
+    async (req, res) => {
+      const brandService: BrandService = req.scope.resolve("brandService");
+
+      const brand = await brandService.handle(req.params.handle, req.query);
+      res.json({ brand });
+    }
+  );
+  /*
    * Creates a Brand
    * POST
    */

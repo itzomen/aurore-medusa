@@ -82,6 +82,33 @@ class BrandService extends TransactionBaseService {
     return brand;
   }
 
+  /**
+   * Retrieves a specific brand.
+   * @param handle - the id of the brand to retrieve.
+   * @param config - any options needed to query for the result.
+   * @return which resolves to the requested brand.
+   */
+  async handle(
+    handle: string,
+    config: FindConfig<Brand> = {}
+  ): Promise<Brand | never> {
+    const brandRepo = this.manager_.getCustomRepository(this.brandRepository_);
+
+    const query = buildQuery({ handle }, config);
+    console.log("Handle", handle);
+
+    const brand = await brandRepo.findOne(query);
+
+    if (!brand) {
+      throw new MedusaError(
+        MedusaError.Types.NOT_FOUND,
+        `Brand with id: ${handle} was not found.`
+      );
+    }
+
+    return brand;
+  }
+
   /** Fetches all brands related to the given selector
    * @param selector - the query object for find
    * @param config - the configuration used to find the objects. contains relations, skip, and take.
