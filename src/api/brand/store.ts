@@ -63,7 +63,7 @@ export default async (router) => {
    * GET
    */
   router.get(
-    "/store/brand/:handle",
+    "/store/brands/:handle",
     cors(storeCorsOptions),
     async (req, res) => {
       const brandService: BrandService = req.scope.resolve("brandService");
