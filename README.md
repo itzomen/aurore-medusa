@@ -64,6 +64,8 @@ npx typeorm migration:create -n UserChanged --dir src/migrations
 # build files
 npm run build
 # migrate
+# NB: First migration migrates medusa models, so you need to run it twice
+# so custom models can be migrated
 medusa migrations run
 ```
 
