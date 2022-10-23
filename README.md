@@ -3,31 +3,34 @@
     <img alt="Medusa" src="https://i.imgur.com/USubGVY.png" width="100" />
   </a>
 </p>
+
 <h1 align="center">
-  Aurore Medusa Backend
+  Aurore Server Starter
 </h1>
-<p align="center">
-This repo provides the skeleton to get you started with using <a href="https://github.com/medusajs/medusa">Medusa</a>. Follow the steps below to get ready.
-</p>
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Medusa is released under the MIT license." />
-  </a>
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-  <p align="center">
-    <a href="https://heroku.com/deploy?template=https://github.com/medusajs/medusa-starter-default/tree/feat/deploy-heroku">
-      <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-    </a>
-  </p>
-</p>
+
+# Overview
+
+![aurore-cover](https://github.com/traleor/aurore-frontend/blob/main/public/cover.png)
+
+## [Live Demo](https://aurore-storefront.herokuapp.com/)
+
+Aurore is a Multi-vendor marketplace built using Medusa, Wagtail for the CMS and Next.Js for the Front-end.
+This marketplace is easy to maintain and update to the latest Medusa version as it is built entirely with the tools provided by Medusa (no third-party included).
+
+## Participants:
+
+<!-- markdown table with the team infos -->
+
+| Name        | Github                                   | Twitter                                      | Discord              |
+| ----------- | ---------------------------------------- | -------------------------------------------- | -------------------- |
+| Peng Boris  | [Github](https://github.com/itzomen)     | [Twitter](https://twitter.com/itz_omen)      | `itzomen#4530`       |
+| Njoh Prince | [Github](https://github.com/NjohPrince)  | [Twitter](https://twitter.com/NjohNoh)       | `theunicorndev#2216` |
+| Egbe Nesta  | [Github](https://github.com/nestaenow)   | [Twitter](https://twitter.com/nestaenow)     | `NestaEnow#4271`     |
+| Meli Imelda | [Github](https://github.com/meli-imelda) | [Twitter](https://twitter.com/Meli_Tchouala) | `MeliImelda#2152`    |
+
+
+### Preview
+![aurore-demo](https://user-images.githubusercontent.com/61752841/197415990-5931a38b-9504-4238-b602-5784c0a11950.gif)
 
 ## Prerequisites
 
