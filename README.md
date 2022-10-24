@@ -42,20 +42,19 @@ This starter has minimal prerequisites and most of these will usually already be
 
 ## Setting up your store
 
-- Install the Medusa CLI
-  ```
-  npm install -g @medusajs/medusa
-  yarn global add @medusajs/medusa
-  ```
-- Clone this project Medusa project
+- Clone this Medusa project
   ```
   git clone <repo-link>
   ```
 - Run your project
   ```
-  cd aurore-medusa
-  npm i
-  # pnpm i
+  cd aurore-medusa && npm i
+  # or using pnpm
+  # CD aurore-medusa && pnpm i
+  # NB: First migration migrates medusa models, so you need to run it twice
+  # so custom models can be migrated
+  medusa migrations run
+  # start server
   medusa develop
   ```
 
