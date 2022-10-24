@@ -47,13 +47,15 @@ This starter has minimal prerequisites and most of these will usually already be
   npm install -g @medusajs/medusa
   yarn global add @medusajs/medusa
   ```
-- Create a new Medusa project
+- Clone this project Medusa project
   ```
-  medusa new my-medusa-store
+  git clone <repo-link>
   ```
 - Run your project
   ```
-  cd my-medusa-store
+  cd aurore-medusa
+  npm i
+  # pnpm i
   medusa develop
   ```
 
@@ -83,59 +85,6 @@ medusa seed -f ./data/seed.json
 ```
 
 This command seeds your database with some sample data to get you started, including a store, an administrator account, a region and a product with variants. What the data looks like precisely you can see in the `./data/seed.json` file.
-
-## Setting up your store with Docker
-
-- Install the Medusa CLI
-  ```
-  npm install -g @medusajs/medusa-cli
-  ```
-- Create a new Medusa project
-  ```
-  medusa new my-medusa-store
-  ```
-- Update project config in `medusa-config.js`:
-
-  ```
-  module.exports = {
-    projectConfig: {
-      redis_url: REDIS_URL,
-      database_url: DATABASE_URL, //postgres connectionstring
-      database_type: "postgres",
-      store_cors: STORE_CORS,
-      admin_cors: ADMIN_CORS,
-    },
-    plugins,
-  };
-  ```
-
-- Run your project
-
-  When running your project the first time `docker compose` should be run with the `build` flag to build your container locally:
-
-  ```
-  docker-compose up --build
-  ```
-
-  When running your project subsequent times you can run docker compose with no flags to spin up your local environment in seconds:
-
-  ```
-  docker-compose up
-  ```
-
-Your local Medusa server is now running on port **9000**.
-
-### Seeding your Medusa store with Docker
-
----
-
-To add seed data to your medusa store running with Docker, run this command in a seperate terminal:
-
-```
-docker exec medusa-server medusa seed -f ./data/seed.json
-```
-
-This will execute the previously described seed script in the running `medusa-server` Docker container.
 
 ## Try it out
 
